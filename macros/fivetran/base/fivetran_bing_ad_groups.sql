@@ -18,6 +18,6 @@ select
     ad_rotation,
     bid_strategy_type
 
-from {{var('ad_groups_table')}}
+from {{source('bing_ads', 'ad_group_history')}}
 
 {% endmacro %}

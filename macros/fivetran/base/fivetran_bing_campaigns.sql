@@ -22,6 +22,6 @@ select distinct
     budget,
     tracking_template
 
-from {{var('campaigns_table')}}
+from {{source('bing_ads', 'campaign_history')}}
 
 {% endmacro %}

@@ -25,6 +25,6 @@ select
     path_1,
     path_2
 
-from {{var('ads_table')}}
+from {{source('bing_ads', 'ad_history')}}
 
 {% endmacro %}

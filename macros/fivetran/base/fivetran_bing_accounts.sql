@@ -30,6 +30,6 @@ select
     last_modified_by_user_id,
     last_modified_time
     
-from {{var('accounts_table')}}
+from {{source('bing_ads', 'account_history')}}
 
 {% endmacro %}
