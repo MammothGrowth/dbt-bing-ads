@@ -31,5 +31,6 @@ select
     last_modified_time
     
 from {{source('bing_ads', 'account_history')}}
+qualify row_number() over (partition by id order by modified_time desc) = 1
 
 {% endmacro %}

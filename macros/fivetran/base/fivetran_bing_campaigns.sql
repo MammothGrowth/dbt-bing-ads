@@ -23,5 +23,6 @@ select distinct
     tracking_template
 
 from {{source('bing_ads', 'campaign_history')}}
+qualify row_number() over (partition by id order by modified_time desc) = 1
 
 {% endmacro %}

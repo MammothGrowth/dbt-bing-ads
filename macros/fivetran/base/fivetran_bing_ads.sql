@@ -26,5 +26,6 @@ select
     path_2
 
 from {{source('bing_ads', 'ad_history')}}
+qualify row_number() over (partition by id order by modified_time desc) = 1
 
 {% endmacro %}

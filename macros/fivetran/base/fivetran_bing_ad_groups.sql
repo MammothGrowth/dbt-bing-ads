@@ -19,5 +19,6 @@ select
     bid_strategy_type
 
 from {{source('bing_ads', 'ad_group_history')}}
+qualify row_number() over (partition by id order by modified_time desc) = 1
 
 {% endmacro %}
