@@ -10,6 +10,7 @@ bing_keyword_performance_agg as (
     
         campaign_date,
         keyword_id as criteria_id,
+        ad_id,
         ad_group_id,
         ad_group_name,
         url_host,
