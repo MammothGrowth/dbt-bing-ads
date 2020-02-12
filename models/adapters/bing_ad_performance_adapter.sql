@@ -21,7 +21,7 @@ bing_keyword_performance_agg as (
         utm_term,
         campaign_id,
         campaign_name,
-        'bing ads' as platform,
+        'bing' as platform,
         sum(clicks) as clicks,
         sum(impressions) as impressions,
         sum(spend) as spend
