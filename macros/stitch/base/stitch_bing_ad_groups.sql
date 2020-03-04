@@ -18,6 +18,6 @@ select
     adrotation as ad_rotation,
     biddingscheme as bidding_scheme
 
-from {{var('ad_groups_table')}}
+from {{source('bing_ads', var('ad_groups_table'))}}
 
 {% endmacro %}

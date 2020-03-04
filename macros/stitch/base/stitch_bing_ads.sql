@@ -26,6 +26,6 @@ select
     path1 as path_1,
     path2 as path_2
 
-from {{var('ads_table')}}
+from {{source('bing_ads', var('ads_table'))}}
 
 {% endmacro %}

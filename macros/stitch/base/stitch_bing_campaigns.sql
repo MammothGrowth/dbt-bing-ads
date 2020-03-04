@@ -21,6 +21,6 @@ select
     trackingurltemplate as tracking_url_template,
     urlcustomparameters as url_custom_parameters
 
-from {{var('campaigns_table')}}
+from {{source('bing_ads', var('campaigns_table'))}}
 
 {% endmacro %}

@@ -27,7 +27,7 @@ select
 
     lastmodifiedbyuserid as last_modified_by_user_id,
     lastmodifiedtime as last_modified_time
-    
-from {{var('accounts_table')}}
 
+from {{source('bing_ads', var('accounts_table'))}}
+    
 {% endmacro %}
