@@ -33,7 +33,7 @@ renamed as (
         campaignstatus as campaign_status,
         
         replace(
-            coalesce(destinationurl, '') || coalesce(finalurl, ''),
+            coalesce(finalurl, ''),
             '%20', ' '
             ) as url,
         
